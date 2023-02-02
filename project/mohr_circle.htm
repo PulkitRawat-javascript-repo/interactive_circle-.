@@ -56,10 +56,11 @@
         var mouse1 = new Two.Vector();
 
         var rectangle = two1.makeRectangle((two1.width/2)-150, (two1.height) / 2, 100, 40);
-        rectangle.id = "angle";
+        c = two1.makeText("k",(two1.width/2)-150, (two1.height) / 2)
+        // instead of k mention anything  
 
         var rectangle1 = two1.makeRectangle((two1.width/2)+150, (two1.height) / 2, 100, 40);
-        rectangle.id = "angle1";
+        d = two1.makeText("h",(two1.width/2)+150, (two1.height) / 2)
 
         var dot = two1.makeCircle((two1.width/2)-100, (two1.height) / 2, 10);
         dot.fill = '#06090c';
@@ -95,7 +96,9 @@
             yaxis1.rotation = theta;
             rectangle.translation.set((two1.width/2)-r*Math.cos(theta)-50, (two1.height/2)-r*Math.sin(theta));
             rectangle1.translation.set((two1.width/2)+r*Math.cos(theta)+50, (two1.height/2)+r*Math.sin(theta));
-            
+            c.translation.set((two1.width/2)-r*Math.cos(theta)-50, (two1.height/2)-r*Math.sin(theta));
+            d.translation.set((two1.width/2)+r*Math.cos(theta)+50, (two1.height/2)+r*Math.sin(theta));
+
             two1.update();
             yaxis1.remove()
             
