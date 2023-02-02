@@ -13,13 +13,12 @@
             border: 5px solid;
             border-width: 2px;
             border-color: #505b61;
-            /* box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22); */
+            
             cursor: pointer;
             transition: 0.4s;
             background-color: #f6f7f8;
             overflow: hidden;
-            /* this fixes the overflow:hidden in Chrome/Opera */
-            /* -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC); */
+          
         }
         </style>
            
@@ -44,7 +43,7 @@
             two1.update();
             var mouse = new Two.Vector();
         var yaxis = two1.makeLine((two1.width/2), (two1.height/2)-100, (two1.width/2), (two1.height/2)+100);
-        // var yaxis = two1.makeLine(0, 0, (two1.width/2), (two1.height/2)+100);
+        
         yaxis.linewidth = 4;
         yaxis.noFill();
         yaxis.stroke = "yellow";
@@ -84,9 +83,7 @@
                     yaxis1.stroke = "green";
                     dot.translation.set(mouse1.x, mouse1.y);
                     yaxis1.rotation = theta;
-            // yy1 = ((two1.height/2)-4) - 100 * Math.sin(t-Math.PI);
-            // yy2 = ((two1.height/2)-4) - 100 * Math.sin(t+Math.PI);
-            // yaxis1.translation.set(mouse.x, 0);
+            
             two1.update();
             
             
