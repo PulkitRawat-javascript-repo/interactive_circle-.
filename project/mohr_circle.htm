@@ -71,8 +71,8 @@
             mouse1.x = e.clientX - getOffset1(ob1).left;
             mouse1.y = e.clientY - getOffset1(ob1).top;
             let r = 100;
-                let theta = (mouse1.y -(two1.height/2))/(mouse1.x - (two1.width/2)) ; 
-                // console.log(theta*(180/Math.PI ))
+                let theta = Math.atan((mouse1.y -(two1.height/2))/(mouse1.x - (two1.width/2))) ; 
+                console.log(theta*(180/Math.PI ))
                 // console.log(mouse.x)
               
                     var yaxis1 = two1.makeLine(- r,0, r,0);
