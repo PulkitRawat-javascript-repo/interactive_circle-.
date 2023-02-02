@@ -60,42 +60,37 @@
         dot.stroke = '#13ffb9';
         dot.linewidth = 3;
         two1.update();
+        var dot1 = two1.makeCircle((two1.width/2)+100, (two1.height) / 2, 10);
+        dot1.fill = '#06090c';
+        dot1.stroke = '#13ffb9';
+        dot1.linewidth = 3;
         two1.update();
 
         ob1.addEventListener('pointermove', pointermove, false);
 
         function pointermove(e) {
-            mouse.x = e.clientX - getOffset(ob1).left;
-            mouse.y = e.clientY - getOffset(ob1).top;
-            // console.log(mouse.x, mouse.y);
             mouse1.x = e.clientX - getOffset1(ob1).left;
             mouse1.y = e.clientY - getOffset1(ob1).top;
             let r = 100;
-                let theta = Math.atan((mouse1.y -(two1.height/2))/(mouse1.x - (two1.width/2))) ; 
-                console.log(theta*(180/Math.PI ))
-                // console.log(mouse.x)
+            let theta = Math.atan((mouse1.y -(two1.height/2))/(mouse1.x - (two1.width/2))) ; 
+            console.log(theta*(180/Math.PI ))
+            // console.log(mouse.x)
               
-                    var yaxis1 = two1.makeLine(- r,0, r,0);
-                    yaxis1.position.set(two1.width/2, two1.height/2)
-                    // console.log((two1.width/2) - r,(two1.height/2), (two1.width/2) + r, (two1.height/2))
-                    yaxis1.linewidth = 4;
-                    yaxis1.noFill();
-                    yaxis1.stroke = "green";
-                    dot.translation.set(mouse1.x, mouse1.y);
-                    yaxis1.rotation = theta;
-                    yaxis1.remove()
+            var yaxis1 = two1.makeLine(- r,0, r,0);
+            yaxis1.position.set(two1.width/2, two1.height/2)
+                // console.log((two1.width/2) - r,(two1.height/2), (two1.width/2) + r, (two1.height/2))
+            yaxis1.linewidth = 4;
+            yaxis1.noFill();
+            yaxis1.stroke = "green";
+            dot.translation.set((two1.width/2)-r*Math.cos(theta), (two1.height/2)-r*Math.sin(theta));
+            dot1.translation.set((two1.width/2)+r*Math.cos(theta), (two1.height/2)+r*Math.sin(theta));
+            yaxis1.rotation = theta;
             two1.update();
+            yaxis1.remove()
+            
             
             
         }  
-    
-        function getOffset(el) {
-            const rect = el.getBoundingClientRect();
-            return {
-                left: rect.left + window.scrollX,
-                top: rect.top + window.scrollY
-            }
-        }
         function getOffset1(el) {
             const rect = el.getBoundingClientRect();
             return {
