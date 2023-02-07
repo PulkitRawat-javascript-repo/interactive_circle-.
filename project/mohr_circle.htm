@@ -97,11 +97,11 @@
             paxis1.stroke = "red";
             paxis1.position.set(75,430)
 
-            var paxis2 = two1.makeLine(0,-24.5,0,24.5);
+            var paxis2 = two1.makeLine(0,0,0,-49);
             paxis2.linewidth = 4;
             paxis2.noFill();
             paxis2.stroke = "yellow";
-            paxis2.position.set(75,404.5)
+            paxis2.position.set(75,430)
 
             var jaxis1 = two1.makeLine(-25,0,25,0);
             jaxis1.linewidth = 4;
@@ -109,11 +109,11 @@
             jaxis1.stroke = "red";
             jaxis1.position.set(425,430)
 
-            var jaxis2 = two1.makeLine(0,-24.5,0,24.5);
+            var jaxis2 = two1.makeLine(0,0,0,-49);
             jaxis2.linewidth = 4;
             jaxis2.noFill();
             jaxis2.stroke = "yellow";
-            jaxis2.position.set(425,404.5)
+            jaxis2.position.set(425,430)
 
             var parrow1 = two1.makeArrow(25,0,35,0)
             parrow1.linewidth = 4;
@@ -121,11 +121,11 @@
             parrow1.stroke = "red";
             parrow1.position.set(75,430)
 
-            var parrow2 = two1.makeArrow(0,-24.5,0,-34.5)
+            var parrow2 = two1.makeArrow(0,-49,0,-59)
             parrow2.linewidth = 4;
             parrow2.noFill();
             parrow2.stroke = "yellow";
-            parrow2.position.set(75,404.5)
+            parrow2.position.set(75,430)
 
             var jarrow1 = two1.makeArrow(25,0,35,0)
             jarrow1.linewidth = 4;
@@ -133,11 +133,11 @@
             jarrow1.stroke = "red";
             jarrow1.position.set(425,430)
 
-            var jarrow2 = two1.makeArrow(0,-24.5,0,-34.5)
+            var jarrow2 = two1.makeArrow(0,-49,0,-59)
             jarrow2.linewidth = 4;
             jarrow2.noFill();
             jarrow2.stroke = "yellow";
-            jarrow2.position.set(425,404.5)
+            jarrow2.position.set(425,430)
 
 
             dot.translation.set((two1.width/2)-r*Math.cos(theta), (two1.height/2)-r*Math.sin(theta));
@@ -147,6 +147,7 @@
             rectangle1.translation.set((two1.width/2)+r*Math.cos(theta)+50, (two1.height/2)+r*Math.sin(theta));
             c.translation.set((two1.width/2)-r*Math.cos(theta)-50, (two1.height/2)-r*Math.sin(theta));
             d.translation.set((two1.width/2)+r*Math.cos(theta)+50, (two1.height/2)+r*Math.sin(theta));
+            // niche wala formulae shi hai pr apna theta 0-180 vary krta hai jisse jabki sir ka theta 0-360 vary krta hai iska koi tarika bta
             paxis1.rotation = 0.5*theta
             paxis2.rotation = 0.5*theta
             jaxis1.rotation = 0.5*theta
