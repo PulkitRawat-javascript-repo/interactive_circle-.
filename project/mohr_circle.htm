@@ -94,7 +94,7 @@
             var paxis1 = two1.makeLine(-25,0,25,0);
             paxis1.linewidth = 4;
             paxis1.noFill();
-            paxis1.stroke = "red";
+            paxis1.stroke = "yellow";
             paxis1.position.set(75,430)
 
             var paxis2 = two1.makeLine(0,0,0,-49);
@@ -106,7 +106,7 @@
             var jaxis1 = two1.makeLine(-25,0,25,0);
             jaxis1.linewidth = 4;
             jaxis1.noFill();
-            jaxis1.stroke = "red";
+            jaxis1.stroke = "yellow";
             jaxis1.position.set(425,430)
 
             var jaxis2 = two1.makeLine(0,0,0,-49);
@@ -118,7 +118,7 @@
             var parrow1 = two1.makeArrow(25,0,35,0)
             parrow1.linewidth = 4;
             parrow1.noFill();
-            parrow1.stroke = "red";
+            parrow1.stroke = "yellow";
             parrow1.position.set(75,430)
 
             var parrow2 = two1.makeArrow(0,-49,0,-59)
@@ -130,7 +130,7 @@
             var jarrow1 = two1.makeArrow(25,0,35,0)
             jarrow1.linewidth = 4;
             jarrow1.noFill();
-            jarrow1.stroke = "red";
+            jarrow1.stroke = "yellow";
             jarrow1.position.set(425,430)
 
             var jarrow2 = two1.makeArrow(0,-49,0,-59)
@@ -147,7 +147,7 @@
             rectangle1.translation.set((two1.width/2)+r*Math.cos(theta)+50, (two1.height/2)+r*Math.sin(theta));
             c.translation.set((two1.width/2)-r*Math.cos(theta)-50, (two1.height/2)-r*Math.sin(theta));
             d.translation.set((two1.width/2)+r*Math.cos(theta)+50, (two1.height/2)+r*Math.sin(theta));
-            // niche wala formulae shi hai pr apna theta 0-180 vary krta hai jisse jabki sir ka theta 0-360 vary krta hai iska koi tarika bta
+            // niche wala formulae shi hai pr apna theta 0-180 vary krta hai jisse jabki sir ka theta 0-360 vary krta hai iska koi tarika
             paxis1.rotation = 0.5*theta
             paxis2.rotation = 0.5*theta
             jaxis1.rotation = 0.5*theta
